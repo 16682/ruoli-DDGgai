@@ -168,38 +168,36 @@ def sign_api():
             existing_config['users'] = [
                     # 任务一：日常签到 (type: 1)
                 {
-                    
-                        'type': 1,         
-                        'schoolName': school,
-                        'username': username,
-                        'password': password,
-                        'signLevel': 1,
-                        'title': 0,
-                        'checkTitle': 0,
-                        'abnormalReason': "", 
-                        'lon': float(lon),  
-                        'lat': float(lat),  
-                        'address': address,
-                        'photo': photo_url
+                    'type': 1,         
+                    'schoolName': school, # 绝对防御：这里绝对不可能是空了
+                    'username': username,
+                    'password': password,
+                    'signLevel': 1,
+                    'title': 0,
+                    'checkTitle': 0,
+                    'abnormalReason': "", 
+                    'lon': float(lon),  
+                    'lat': float(lat),  
+                    'address': address,
+                    'photo': photo_url,
                     
                     
                     # 'deviceId': "B165F069-7E39-7B5B-2DA5-07B0EC4BFBF8" # 🌟🌟 核心防封锁：强制锁死设备码 🌟🌟# 🌟 新增
                 },
                 # 任务二：查寝签到 (type: 2)
                 {
-                    
-                        'type': 2,         
-                        'schoolName': school,
-                        'username': username,
-                        'password': password,
-                        'signLevel': 1,
-                        'title': 0,
-                        'checkTitle': 0,
-                        'abnormalReason': "", 
-                        'lon': float(lon),  
-                        'lat': float(lat),  
-                        'address': address,
-                        'photo': photo_url
+                    'type': 2,         
+                    'schoolName': school, 
+                    'username': username,
+                    'password': password,
+                    'signLevel': 1,
+                    'title': 0,
+                    'checkTitle': 0,
+                    'abnormalReason': "", 
+                    'lon': float(lon),  
+                    'lat': float(lat),  
+                    'address': address,
+                    'photo': photo_url,
                         # 'deviceId': "B165F069-7E39-7B5B-2DA5-07B0EC4BFBF8" # 🌟🌟 核心防封锁：强制锁死设备码 🌟🌟
                     
                     
