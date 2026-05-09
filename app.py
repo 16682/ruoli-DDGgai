@@ -43,8 +43,6 @@ def sign_api():
     username = data.get('username')
     password = data.get('password')
     school = data.get('school')
-    if not school or school.strip() == "":
-        school = "重庆三峡学院"
     # 新增接收一个具体的地址参数，如果没有传，就降级使用 school 名称
     address = data.get('address', school)
     photo_url = data.get('photo', '')
