@@ -169,7 +169,7 @@ def sign_api():
                     # 任务一：日常签到 (type: 1)
                 {
                     'type': 1,         
-                    'schoolName': school, # 绝对防御：这里绝对不可能是空了
+                    'schoolName': school,
                     'username': username,
                     'password': password,
                     'signLevel': 1,
@@ -180,14 +180,12 @@ def sign_api():
                     'lat': float(lat),  
                     'address': address,
                     'photo': photo_url,
-                    
-                    
-                    # 'deviceId': "B165F069-7E39-7B5B-2DA5-07B0EC4BFBF8" # 🌟🌟 核心防封锁：强制锁死设备码 🌟🌟# 🌟 新增
+                    'deviceId': "B165F069-7E39-7B5B-2DA5-07B0EC4BFBF8" # 🌟🌟 核心防封锁：强制锁死设备码 🌟🌟# 🌟 新增
                 },
                 # 任务二：查寝签到 (type: 2)
                 {
                     'type': 2,         
-                    'schoolName': school, 
+                    'schoolName': school,
                     'username': username,
                     'password': password,
                     'signLevel': 1,
@@ -198,10 +196,7 @@ def sign_api():
                     'lat': float(lat),  
                     'address': address,
                     'photo': photo_url,
-                        # 'deviceId': "B165F069-7E39-7B5B-2DA5-07B0EC4BFBF8" # 🌟🌟 核心防封锁：强制锁死设备码 🌟🌟
-                    
-                    
-                  }
+                    'deviceId': "B165F069-7E39-7B5B-2DA5-07B0EC4BFBF8" # 🌟🌟 核心防封锁：强制锁死设备码 🌟🌟
                 }
                     
             ]
