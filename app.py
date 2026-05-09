@@ -168,22 +168,26 @@ def sign_api():
             existing_config['users'] = [
                     # 任务一：日常签到 (type: 1)
                 {
-                    'type': 1,         
-                    'schoolName': school,
-                    'username': username,
-                    'password': password,
-                    'signLevel': 1,
-                    'title': 0,
-                    'checkTitle': 0,
-                    'abnormalReason': "", 
-                    'lon': float(lon),  
-                    'lat': float(lat),  
-                    'address': address,
-                    'photo': photo_url,
+                    'user': {  # 👈 加上这层套娃外壳！
+                        'type': 1,         
+                        'schoolName': school,
+                        'username': username,
+                        'password': password,
+                        'signLevel': 1,
+                        'title': 0,
+                        'checkTitle': 0,
+                        'abnormalReason': "", 
+                        'lon': float(lon),  
+                        'lat': float(lat),  
+                        'address': address,
+                        'photo': photo_url
+                        # 如果你需要把代理也通过 API 传进去，可以在这里加上 'proxy': {...}
+                    }
                     # 'deviceId': "B165F069-7E39-7B5B-2DA5-07B0EC4BFBF8" # 🌟🌟 核心防封锁：强制锁死设备码 🌟🌟# 🌟 新增
                 },
                 # 任务二：查寝签到 (type: 2)
                 {
+                  'user': {  # 👈 加上这层套娃外壳
                     'type': 2,         
                     'schoolName': school,
                     'username': username,
@@ -197,6 +201,7 @@ def sign_api():
                     'address': address,
                     'photo': photo_url,
                     # 'deviceId': "B165F069-7E39-7B5B-2DA5-07B0EC4BFBF8" # 🌟🌟 核心防封锁：强制锁死设备码 🌟🌟
+                  }
                 }
                     
             ]
